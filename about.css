@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #161618;
+    position: sticky;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 60px 20px 60px;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+ul li a:hover {
+    background-color: #333333;
+    
+}
+
+ul li a:active {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: teal;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 60px;
+    font-family: "Nunito";
+    font-weight: 500;
+}
+
+div.profile {
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Nunito";
+}
+
+h2#subheading {
+    color: #161618;
+    text-align: center;
+    font-family: "Nunito";
+}
+
+div.skills {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+
+div.techskills {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    background-color: teal;
+    color:#ffffff;
+    font-family: "Nunito";
+}
+
+@media screen and (max-width:650px) {
+    div.skills {
+        width: 50px;
+        height: 50px;
+    }
+
+    div.techskills {
+        font-size: 10px;
+    }
+    ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
