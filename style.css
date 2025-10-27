@@ -1,71 +1,123 @@
+/* PAGE LAYOUT */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
 .container {
-    background-color: rgb(224, 247, 224);
-    width: 820px;
+  background: rgb(224, 247, 224);
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  min-height: 100vh; /* fill browser height */
+  box-sizing: border-box;
 }
 
+/* TITLE */
 h1 {
-    font-family: sans-serif;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    margin-top: 70px;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
+/* MAKE TABLE SCROLL ON SMALL SCREENS */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* EXPENSE TABLE */
 .expense-tracker {
-    border-collapse: collapse;
-    min-width: 750px;
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
 }
 
 .expense-tracker * {
-    font-family: sans-serif;
-    padding: 10px 20px;
-    border-bottom: 2px solid green;
+  padding: 10px;
+  border-bottom: 2px solid green;
 }
 
 .expense-tracker td {
-    padding: 10px;
+  padding: 10px;
 }
 
+/* INPUT STYLES */
 .input,
 .delete-entry {
-    height: 30px;
-    font-size: 14px;
-    padding: 0 10px;
-    margin:0;
-    box-sizing: border-box;
+  height: 35px;
+  font-size: 14px;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .input {
-    border: 1px solid grey;
-    border-radius: 5px;
-    outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .input:focus {
-    border-color: grey
+  border-color: green;
 }
 
+/* DELETE BUTTON */
 .delete {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    background: none;
-    color: red;
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: none;
+  color: red;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .delete:hover {
-    background: rgba(255, 0, 0, 0.1);
+  background: rgba(255, 0, 0, 0.1);
 }
 
+/* BUTTON ROW */
 .controls,
 .summary {
-    text-align: right;
+  text-align: right;
 }
 
+/* RESPONSIVE SETTINGS */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
 
+  .expense-tracker {
+    font-size: 14px;
+  }
+
+  .input {
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .delete {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Reduce column text */
+  .expense-tracker th,
+  .expense-tracker td {
+    padding: 6px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
